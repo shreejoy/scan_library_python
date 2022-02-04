@@ -1,0 +1,1 @@
+Personal script for creating a dump of a python function or library.
