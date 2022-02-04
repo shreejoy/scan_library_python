@@ -2,13 +2,13 @@ import sys
 import json
 
 def scan(fn, depth = 1):
-    if depth > 3:
+    if depth > 2:
         return {}
     func = eval(fn)
     result = dict()
     result[fn] = dict()
     result[fn]['func'] = dict()
-    result[fn]['callable'] = callable(fn)
+    result[fn]['callable'] = callable(func)
     for _func in dir(func):
         if '_' in _func or not _func.islower():
             continue
